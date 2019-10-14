@@ -1,0 +1,8 @@
+image: java:8-jdk
+
+build-job:
+  stage: build
+  tags:
+    - docker
+  script:
+    ./gradlew build
