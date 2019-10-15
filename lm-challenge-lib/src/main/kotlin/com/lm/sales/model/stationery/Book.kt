@@ -7,18 +7,10 @@ import com.lm.sales.model.Taxes
  *
  * @author j.hernandez
  */
-data class Book (val bookName: String,
-                 val isImported: Boolean,
-                 val bookPages: Int?,
-                 val bookEditorial: String?,
-                 val bookManufacturer: String?,
-                 val price: Double, override var taxes: Taxes) : Stationery {
-
-    override val name = bookName
-    override val imported = isImported
-    override val pages = bookPages
-    override val editorial = bookEditorial
-    override val manufacturer = bookManufacturer
-    override val basePrice = price
-
-}
+data class Book (override val name: String,
+                 val author: String,
+                 override val imported: Boolean,
+                 override val pages: Int?,
+                 override val editorial: String?,
+                 override val basePrice: Double,
+                 override var taxes: Taxes? = null) : Stationery

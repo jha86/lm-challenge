@@ -1,4 +1,3 @@
-
 import com.beust.klaxon.JsonObject
 import com.beust.klaxon.Parser
 import org.junit.Test
@@ -10,16 +9,12 @@ import org.junit.jupiter.api.TestInstance
 class JsonParserTest {
 
     @Test
-    fun convertCD() {
+    fun parseCD() {
 
-        val cd = "/CD.json".parse() as JsonObject
+        val cd = "/music/CD.json".parse() as JsonObject
 
-        Assertions.assertEquals("Purple Rain", cd.string("name"))
-        Assertions.assertEquals("Prince", cd.string("artist"))
-        Assertions.assertEquals(9, cd.int("tracksNumber"))
-        Assertions.assertEquals(true, cd.boolean("imported"))
-        Assertions.assertEquals(1984, cd.int("year"))
-        Assertions.assertEquals("Warner Bros", cd.string("label"))
+        Assertions.assertEquals("music CD", cd.string("name"))
+        Assertions.assertEquals(false, cd.boolean("imported"))
         Assertions.assertEquals(14.99, cd.double("price"))
     }
 

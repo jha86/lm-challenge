@@ -1,40 +1,40 @@
 package com.lm.sales.builders
 
 import com.lm.sales.model.Taxes
-import com.lm.sales.model.music.CD
+import com.lm.sales.model.stationery.Book
 
 class BookBuilder {
 
-	private lateinit var discName: String
-	private lateinit var artist: String
-	private var tracksNumber: Int? = null
-	private lateinit var label: String
+	private lateinit var name: String
+	private lateinit var author: String
+	private var pages: Int = 0
+	private lateinit var editorial: String
 	private var isImported: Boolean = false
 	private var basePrice: Double = 0.0
 	private lateinit var taxes: Taxes
 
 	fun withName(name: String): BookBuilder {
-		this.discName = name
+		this.name = name
 		return this
 	}
 
-	fun withArtist(artist: String): BookBuilder {
-		this.artist = artist
+	fun withAuthor(author: String): BookBuilder {
+		this.author = author
 		return this
 	}
 
-	fun withTracks(tracksNumber: Int): BookBuilder {
-		this.tracksNumber = tracksNumber
-		return this
-	}
-
-	fun withRecordLabel(label: String): BookBuilder {
-		this.label = label
-		return this
-	}
-
-	fun setImported(imported: Boolean): BookBuilder {
+	fun isImported(imported: Boolean): BookBuilder {
 		this.isImported = imported
+		return this
+	}
+
+	fun withPages(pages: Int): BookBuilder {
+		this.pages = pages
+		return this
+	}
+
+	fun withEditorial(editorial: String): BookBuilder {
+		this.editorial = editorial
 		return this
 	}
 
@@ -43,8 +43,8 @@ class BookBuilder {
 		return this
 	}
 
-	fun build(): CD {
-		return CD(discName, artist, tracksNumber, label, isImported, basePrice, taxes)
+	fun build(): Book {
+		return Book(name, author, isImported, pages, editorial, basePrice)
 	}
 
 }

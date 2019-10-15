@@ -9,8 +9,12 @@ interface Product {
 
     val name: String
     val basePrice: Double
-    var taxes: Taxes
+    var taxes: Taxes?
     val imported: Boolean
+}
+
+enum class Presentation {
+    box, bottle, packet
 }
 
 data class Taxes(var taxesAmount: Double = 0.0,
