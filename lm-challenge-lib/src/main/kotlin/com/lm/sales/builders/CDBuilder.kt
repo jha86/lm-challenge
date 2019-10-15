@@ -5,9 +5,9 @@ import com.lm.sales.model.music.CD
 class CDBuilder {
 
 	private lateinit var discName: String
-	private lateinit var artist: String
+	private var artist: String? = null
 	private var tracksNumber: Int? = null
-	private lateinit var label: String
+	private var label: String? = null
 	private var isImported: Boolean = false
 	private var basePrice: Double = 0.0
 

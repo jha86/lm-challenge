@@ -6,9 +6,9 @@ import com.lm.sales.model.stationery.Book
 class BookBuilder {
 
 	private lateinit var name: String
-	private lateinit var author: String
+	private var author: String? = null
 	private var pages: Int = 0
-	private lateinit var editorial: String
+	private var editorial: String? = null
 	private var isImported: Boolean = false
 	private var basePrice: Double = 0.0
 	private lateinit var taxes: Taxes

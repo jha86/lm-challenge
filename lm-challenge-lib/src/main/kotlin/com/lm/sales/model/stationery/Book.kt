@@ -8,7 +8,7 @@ import com.lm.sales.model.Taxes
  * @author j.hernandez
  */
 data class Book (override val name: String,
-                 val author: String,
+                 val author: String?,
                  override val imported: Boolean,
                  override val pages: Int?,
                  override val editorial: String?,
