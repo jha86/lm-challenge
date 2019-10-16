@@ -7,9 +7,9 @@ class PillsBuilder {
 
 	private lateinit var name: String
 	private lateinit var pharma: String
+	private lateinit var presentation: Presentation
 	private var isImported: Boolean = false
 	private var basePrice: Double = 0.0
-	private lateinit var presentation: Presentation
 
 	fun withName(name: String): PillsBuilder {
 		this.name = name
@@ -21,6 +21,11 @@ class PillsBuilder {
 		return this
 	}
 
+	fun withPresentation(presentation: Presentation): PillsBuilder {
+		this.presentation = presentation
+		return this
+	}
+
 	fun isImported(imported: Boolean): PillsBuilder {
 		this.isImported = imported
 		return this
@@ -28,11 +33,6 @@ class PillsBuilder {
 
 	fun withBasePrice(price: Double): PillsBuilder {
 		this.basePrice = price
-		return this
-	}
-
-	fun withPresentation(presentation: Presentation): PillsBuilder {
-		this.presentation = presentation
 		return this
 	}
 

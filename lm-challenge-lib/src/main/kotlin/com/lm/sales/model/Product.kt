@@ -11,10 +11,11 @@ interface Product {
     val basePrice: Double
     var taxes: Taxes?
     val imported: Boolean
+	val presentation: Presentation?
 }
 
 enum class Presentation {
-    box, bottle, packet, bar
+    box, bottle, packet
 }
 
 data class Taxes(var taxesAmount: Double = 0.0,

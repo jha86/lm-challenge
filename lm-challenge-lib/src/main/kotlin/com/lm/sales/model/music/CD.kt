@@ -1,5 +1,6 @@
 package com.lm.sales.model.music
 
+import com.lm.sales.model.Presentation
 import com.lm.sales.model.Taxes
 
 /**
@@ -13,4 +14,5 @@ data class CD (override val name: String,
 			   override val recordLabel: String?,
 			   override val imported: Boolean,
 			   override val basePrice: Double,
+			   override val presentation: Presentation? = null,
 			   override var taxes: Taxes? = null): Music

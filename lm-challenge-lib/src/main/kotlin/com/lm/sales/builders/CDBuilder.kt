@@ -1,5 +1,6 @@
 package com.lm.sales.builders
 
+import com.lm.sales.model.Presentation
 import com.lm.sales.model.music.CD
 
 class CDBuilder {
@@ -8,6 +9,7 @@ class CDBuilder {
 	private var artist: String? = null
 	private var tracksNumber: Int? = null
 	private var label: String? = null
+	private var presentation: Presentation? = null
 	private var isImported: Boolean = false
 	private var basePrice: Double = 0.0
 
@@ -31,6 +33,11 @@ class CDBuilder {
 		return this
 	}
 
+	fun withPresentation(presentation: Presentation): CDBuilder {
+		this.presentation = presentation
+		return this
+	}
+
 	fun isImported(imported: Boolean): CDBuilder {
 		this.isImported = imported
 		return this
@@ -42,7 +49,7 @@ class CDBuilder {
 	}
 
 	fun build(): CD {
-		return CD(discName, artist, tracksNumber, label, isImported, basePrice)
+		return CD(discName, artist, tracksNumber, label, isImported, basePrice, presentation)
 	}
 
 }

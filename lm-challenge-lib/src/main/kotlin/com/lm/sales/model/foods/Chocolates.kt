@@ -8,8 +8,8 @@ import com.lm.sales.model.Taxes
  *
  */
 data class Chocolates (override val name: String,
-					   override val manufacturer: String,
-					   override val presentation: Presentation,
+					   override val manufacturer: String? = null,
+					   override val presentation: Presentation? = null,
 					   override val imported: Boolean,
 					   override val basePrice: Double,
 					   override var taxes: Taxes? = null): Foods

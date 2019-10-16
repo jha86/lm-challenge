@@ -4,7 +4,7 @@ import com.lm.sales.builders.BookBuilder
 import com.lm.sales.builders.CDBuilder
 import com.lm.sales.builders.PillsBuilder
 import com.lm.sales.model.Presentation
-import com.lm.sales.services.TaxesCalculator
+import com.lm.sales.util.TaxesCalculator
 import org.junit.Test
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.TestInstance
