@@ -31,8 +31,6 @@ subprojects {
 		compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
 		compile "io.github.microutils:kotlin-logging:$kt_logging_version"
 		implementation 'ch.qos.logback:logback-classic:1.2.3'
-		compile 'com.beust:klaxon:5.0.13'
-
 
 		// This dependencies are declared in the parent build.gradle
 		testCompile "org.junit.jupiter:junit-jupiter-api:$jupiter_version"
