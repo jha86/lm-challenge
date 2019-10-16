@@ -14,7 +14,7 @@ interface Product {
 }
 
 enum class Presentation {
-    box, bottle, packet
+    box, bottle, packet, bar
 }
 
 data class Taxes(var taxesAmount: Double = 0.0,
