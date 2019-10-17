@@ -41,7 +41,7 @@ class TaxesCalculator {
             // kotlin's round rounds automatically
             return Taxes().apply {
                 taxesAmount = round(taxes)
-                afterTaxesAmount = round(product.basePrice.plus(taxes))
+                afterTaxesAmount = product.basePrice.plus(taxesAmount)
             }
         }
 

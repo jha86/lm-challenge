@@ -6,7 +6,7 @@ import com.lm.sales.model.medicals.Pills
 class PillsBuilder {
 
 	private lateinit var name: String
-	private lateinit var pharma: String
+	private var pharma: String? = null
 	private lateinit var presentation: Presentation
 	private var isImported: Boolean = false
 	private var basePrice: Double = 0.0
