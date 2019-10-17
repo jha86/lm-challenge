@@ -1,4 +1,4 @@
-# Lastminute Sales-Taxes Challenge
+# LM.com Sales-Taxes Challenge
 
 ### Employed Technologies
 
