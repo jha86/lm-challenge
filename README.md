@@ -1,9 +1,9 @@
 # Lastminute Sales-Taxes Challenge
 
 ### Employed Technologies
-For further reference, please consider the following sections:
 
 * Gradle 5.6.2 -> [Official Gradle documentation](https://docs.gradle.org)
-* Spring Boot -> [Spring Boot Gradle Plugin Reference Guide](https://docs.spring.io/spring-boot/docs/2.1.9.RELEASE/gradle-plugin/reference/html/)
-
-### Additional Links
+* Kotlin 1.3.50 -> [Official Kotlin documentation](https://kotlinlang.org/)
+* JUnit (Jupiter) 5.0.2 -> [Official JUnit 5 User Guide](https://junit.org/junit5/docs/current/user-guide/)
+* CI with Gitlab -> [Last successful pipeline]()
+* IntelliJ IDEA IDE -> [JetBrain's IntelliJ Official Website](https://www.jetbrains.com/idea/)
