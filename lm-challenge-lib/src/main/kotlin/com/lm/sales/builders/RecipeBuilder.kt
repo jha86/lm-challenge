@@ -1,6 +1,7 @@
 package com.lm.sales.builders
 
 import com.lm.sales.model.Product
+import com.lm.sales.util.TaxesCalculator
 import mu.KLogging
 
 /**
@@ -48,7 +49,7 @@ class RecipeBuilder {
 				if(it.presentation != null)
 					pres = it.presentation!!.name.plus(" of")
 
-				// If produt is imported we write it in the recipe
+				// If product is imported we write it in the recipe
 				var imported = ""
 				if(it.imported)
 					imported = "imported"
@@ -57,7 +58,7 @@ class RecipeBuilder {
 			}
 
 			logger.info { "Sales Taxes: $salesTaxes" }
-			logger.info { "Total: $totalAmount"   }
+			logger.info { "Total: ${TaxesCalculator.round(totalAmount)}"   }
 		}
 
 	}

@@ -123,5 +123,11 @@ class ShoppingTests {
 
 		// Adds cart products to recipe and prints it
 		RecipeBuilder().withProducts(cart.productList).withRecipeName("Output 3:").printRecipe()
+
+		// In the particular case of the the imported box of chocolates @ 11.85, it exits a problem with Doubles and rounding.
+		// the 5% of 11.25 its 0.5625 that isn't representable in binary form as a double. We should save the value previously
+		// from a String, and then set the scale and work with BigDecimals
+		//
+		// @see https://blogs.oracle.com/corejavatechtips/the-need-for-bigdecimal
 	}
 }
