@@ -57,7 +57,7 @@ class RecipeBuilder {
 				logger.info { "1 $imported $pres ${it.name}: ${it.taxes!!.afterTaxesAmount}" }
 			}
 
-			logger.info { "Sales Taxes: $salesTaxes" }
+			logger.info { "Sales Taxes: ${TaxesCalculator.round(salesTaxes)}" }
 			logger.info { "Total: ${TaxesCalculator.round(totalAmount)}"   }
 		}
 
